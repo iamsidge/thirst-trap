@@ -19,6 +19,6 @@ Prices checked 20 Oct 2026. They move, so check before you buy. Amazon sells in 
 
 The core parts, without the component kit, stripboard and screws, come to £50.25.
 
-- The pump is small, so measure it and set `pump_d` / `pump_body` in `thirst_trap.scad` before you print the box.
+- The pump is small, so measure it and set `pump_d` / `pump_body` in `thirsty_plants.scad` before you print the box.
 - Check the kit photo for a 220 µF capacitor and a 1N4007 or 1N5819 diode.
 - Skip the Digispark boards: their USB parts sit on PB3/PB4, which are the pot inputs.

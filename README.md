@@ -1,6 +1,6 @@
-# THIRST TRAP — clip-on timed plant waterer
+# THIRSTY PLANTS — clip-on timed plant waterer
 
-![THIRST TRAP](renders/front.png)
+![THIRSTY PLANTS](renders/front.png)
 
 Hangs on the rim of a pot, sucks water out of a bottle through a tube, squirts it into the soil on a timer, sleeps the rest of the time. 3×AA, no mains, no Wi-Fi, no app, no subscription. Two dials: **EVERY** (6 h to 7 days) and **FOR** (3 to 60 s of pumping).
 
@@ -79,7 +79,7 @@ Wire the pots so turning them **clockwise** increases the setting (wiper reads h
 
 ## Firmware
 
-`firmware/thirst_trap/thirst_trap.ino`. It compiles cleanly to about 600 bytes, out of 8 KB.
+`firmware/thirsty_plants/thirsty_plants.ino`. It compiles cleanly to about 600 bytes, out of 8 KB.
 
 1. Arduino IDE → Board Manager URL `http://drazzy.com/package_drazzy.com_index.json` → install **ATTinyCore**.
 2. Board: *ATtiny25/45/85 (No bootloader)*, Chip: ATtiny85, Clock: **1 MHz internal**, BOD: **disabled**, millis: enabled.
@@ -98,7 +98,7 @@ The dials are only read at watering time or when you press the button, so after 
 
 ## Printing (Bambu A1, PETG)
 
-`stl/` has every part, already in print orientation. `thirst_trap.scad` is fully parametric: **measure your pump, battery holder and pot rim, then fix the numbers at the top** before you print. Cheap parts vary by a few mm from seller to seller.
+`stl/` has every part, already in print orientation. `thirsty_plants.scad` is fully parametric: **measure your pump, battery holder and pot rim, then fix the numbers at the top** before you print. Cheap parts vary by a few mm from seller to seller.
 
 | Part | Orientation | Notes |
 |---|---|---|
