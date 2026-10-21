@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate schematic.svg and stripboard.svg for THIRST TRAP."""
+"""Generate schematic.svg and stripboard.svg for THIRSTY PLANTS."""
 import sys
 OUT = sys.argv[1]
 
@@ -180,7 +180,7 @@ T(ddx + 4, 300, "D1", 13, "start", weight="bold"); T(ddx + 4, 317, "1N5819", 12,
 T(ddx - 6, 158, "solder across pump", 11, "end", MUTE)
 
 # title + notes
-T(W/2, 36, "THIRST TRAP — schematic", 20, weight="bold")
+T(W/2, 36, "THIRSTY PLANTS — schematic", 20, weight="bold")
 T(W/2, 58, "Blue labels with the same name are the same connection.", 13, c=MUTE)
 notes = ["PB1 powers the pots only while they are read, and also drives the LED.",
          "D1 is soldered directly on the pump terminals, stripe (cathode) to the + terminal.",
@@ -204,7 +204,7 @@ def bt(x, y, t, size=13, anchor="middle", c=INK, weight="normal"):
     B(f"<text x='{x}' y='{y}' {FONT} font-size='{size}' fill='{c}' text-anchor='{anchor}' font-weight='{weight}'{halo}>{t}</text>")
 SW, SH = 1100, 700
 B(f"<rect width='100%' height='100%' fill='{BG}'/>")
-bt(SW/2, 36, "THIRST TRAP — stripboard layout (17 × 8 holes, ~45 × 22 mm)", 20, weight="bold")
+bt(SW/2, 36, "THIRSTY PLANTS — stripboard layout (17 × 8 holes, ~45 × 22 mm)", 20, weight="bold")
 bt(SW/2, 58, "Viewed from the COMPONENT side. Copper strips run left–right underneath.", 13, c=MUTE)
 # board
 x0, y0 = hp(1, 1); x1, y1 = hp(COLS, ROWS)
