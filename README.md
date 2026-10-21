@@ -29,7 +29,7 @@ Rough AliExpress prices; Amazon UK multipacks cost more but leave you spares. Pr
 | 5 mm LED + 1k resistor | ALIVE light | 0.05 |
 | 220 Ω, 100k resistors | gate resistor, gate pull-down | 0.02 |
 | 220 µF 10 V electrolytic + 100 nF ceramic | stops the MCU browning out when the pump starts | 0.10 |
-| Perfboard ~40×20 mm, hookup wire | | 0.30 |
+| Stripboard, 17 × 8 holes (~45×22 mm), hookup wire | | 0.30 |
 | 6 × M3 screws (4 for the lid, 2 for the clip) + 2 M3 nuts, 1 M8 nut | | 0.40 |
 | ~70 g PETG | box, lid, clip, stake, sinker, 2 knobs | 1.40 |
 | **Total** | not counting batteries | **≈ £8** |
@@ -37,6 +37,16 @@ Rough AliExpress prices; Amazon UK multipacks cost more but leave you spares. Pr
 You also need a way to program the ATtiny: an Uno/Nano running *ArduinoISP*, or a £2 USBasp. If you have neither, an **Arduino Pro Mini 3.3 V/8 MHz** (~£2.50) with its power LED and regulator removed works too. Pin numbers change, the idea doesn't.
 
 ## Wiring
+
+![Schematic](docs/schematic.svg)
+
+### Stripboard layout
+
+![Stripboard layout](docs/stripboard.svg)
+
+The layout has been connectivity-checked against the schematic. The flyback diode D1 isn't on the board: solder it straight across the pump terminals.
+
+<details><summary>Plain-text version</summary>
 
 ```
  BATT+ (4.5V) ──┬───────────────┬──────────────┬─────── ATtiny pin 8 (VCC)
@@ -60,6 +70,8 @@ You also need a way to program the ATtiny: an Uno/Nano running *ArduinoISP*, or 
    ATtiny pin 7 (PB2) ── button ── GND        (internal pull-up)
    ATtiny pin 4 ── GND
 ```
+
+</details>
 
 Put the 220 µF and 100 nF right by the ATtiny's pins 8 and 4. The flyback diode goes across the pump terminals, not somewhere convenient three inches away.
 
@@ -105,7 +117,7 @@ The important parameter is `rim_t` = your pot's rim thickness + ~1 mm. The clip 
 
 1. Screw the clip to the back of the box with 2 × M3 (heads on the pot side, nuts in the hex pockets inside).
 2. Zip-tie the pump into its cradles (the slots go through the back wall), or use foam tape.
-3. Use double-sided foam tape to stick the battery holder between the ribs and the perfboard onto the two nut bosses at the top. Keep anything on the board under ~10 mm tall, and lay the MOSFET flat.
+3. Use double-sided foam tape to stick the battery holder between the ribs and the stripboard onto the two nut bosses at the top. Keep anything on the board under ~10 mm tall, and lay the MOSFET flat.
 4. Fit the pots, button and LED to the lid, wire it all up, and route the outlet tube up the front-right void to the top hole. Keep that tube pushed against the right-hand wall, because it runs right past the edge of the battery holder.
 5. Inlet tube: from the bottom hole into the bottle, with the sinker on the end. Outlet: over the rim to the drip stake pushed into the soil.
 6. Hold WATER until water comes out of the stake. That primes it.
